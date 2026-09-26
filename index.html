@@ -7,31 +7,43 @@
     <link rel="stylesheet" href="style.css">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/9779814278883" target="_blank" class="float-whatsapp" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- Header / Navbar -->
     <header>
         <div class="logo">
-            <h2>Jaiswal Tiles & Sanitary</h2>
+            <h2>Jaiswal Tiles <span>& Sanitary</span></h2>
             <p>Laukaha Bazaar, Rautahat</p>
         </div>
-        <nav>
+        <nav id="navMenu">
             <a href="#home">Home</a>
             <a href="#products">Products</a>
+            <a href="#showcase">Videos & Styles</a>
             <a href="#about">About</a>
             <a href="#contact" class="nav-btn">Contact Us</a>
         </nav>
+        <div class="menu-toggle" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Upgrade Your Home with Premium Tiles & Sanitary Ware</h1>
-            <p>Your trusted retail partner for stylish tiles, durable hardware, wash basins, commodes, showers, and modern bathroom accessories in Laukaha Bazaar, Rautahat, Nepal.</p>
+            <span class="badge"><i class="fas fa-star"></i> Rautahat's Trusted Retail Destination</span>
+            <h1>Transform Your Home With <span>Luxury Tiles & Sanitary</span></h1>
+            <p>Explore our premium collection of glossy floor tiles, stylish wash basins, modern commodes, high-end showers, and complete hardware solutions.</p>
             <div class="hero-btns">
-                <a href="tel:9814278883" class="btn primary-btn"><i class="fas fa-phone"></i> Call: 9814278883</a>
-                <a href="#products" class="btn secondary-btn">Explore Products</a>
+                <a href="tel:9814278883" class="btn primary-btn"><i class="fas fa-phone-alt"></i> Call: 9814278883</a>
+                <a href="#products" class="btn secondary-btn">View Categories <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
@@ -39,33 +51,67 @@
     <!-- Products Showcase Section -->
     <section id="products" class="products-section">
         <div class="container">
-            <h2>Our Product Categories</h2>
-            <p class="section-sub">Quality materials built for strength, beauty, and long-lasting durability.</p>
+            <div class="section-title">
+                <h2>Our Exclusive Collections</h2>
+                <p>Designed for durability, styled for elegance.</p>
+            </div>
             
             <div class="product-grid">
                 <!-- Card 1 -->
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-th"></i></div>
                     <h3>Floor & Wall Tiles</h3>
-                    <p>Wide variety of vitrified, glossy, matte, and anti-skid tiles for living rooms, kitchens, and bathrooms.</p>
+                    <p>Vitrified, glossy, matte, anti-skid floor tiles and designer wall finishes for kitchens and bathrooms.</p>
                 </div>
                 <!-- Card 2 -->
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-sink"></i></div>
                     <h3>Sanitary Ware</h3>
-                    <p>Modern wash basins, sleek commodes, durable pan seats, and premium stainless steel or quartz kitchen sinks.</p>
+                    <p>Modern wash basins, sleek commodes, comfortable pan seats, and premium quartz/steel kitchen sinks.</p>
                 </div>
                 <!-- Card 3 -->
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-shower"></i></div>
-                    <h3>Bathroom Fittings & Taps</h3>
-                    <p>High-quality overhead showers, stylish water taps, basin mixers, and complete plumbing valve accessories.</p>
+                    <h3>Taps & Bathroom Fittings</h3>
+                    <p>Heavy-duty overhead showers, luxury water taps, basin mixers, and leak-proof plumbing accessories.</p>
                 </div>
                 <!-- Card 4 -->
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-tools"></i></div>
-                    <h3>Hardware & Essentials</h3>
-                    <p>Reliable building hardware, construction support items, pipes, and everyday utility elements.</p>
+                    <h3>Hardware Essentials</h3>
+                    <p>Reliable building materials, construction support tools, pipes, and everyday utility elements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tiles Video / Showcase Section -->
+    <section id="showcase" class="video-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tile Styles & Visuals</h2>
+                <p>Take a virtual look at what trending designs look like in modern homes.</p>
+            </div>
+            <div class="video-grid">
+                <!-- Video Item 1 (YouTube Shorts / Embed or Product Video simulation) -->
+                <div class="video-card">
+                    <div class="video-frame">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Tiles Design Preview" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>Latest Floor Vitrified Tiles Collection</h4>
+                        <p>High gloss finish with high scratch resistance.</p>
+                    </div>
+                </div>
+                <!-- Video Item 2 -->
+                <div class="video-card">
+                    <div class="video-frame">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Sanitary Collection Preview" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>Modern Bathroom Sanitary Ware Setup</h4>
+                        <p>Basins, commodes, and shower styling ideas.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -74,36 +120,76 @@
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container about-container">
-            <h2>Why Choose Jaiswal Shop?</h2>
-            <p>We pride ourselves on offering genuine retail products at competitive market rates directly to homeowners, builders, and contractors across Rautahat. Whether you are building a new house or renovating your bathroom, we have everything you need under one roof.</p>
+            <h2>Why Choose Jaiswal Tiles & Hardware?</h2>
+            <p>We believe in building long-lasting relationships with our customers across Rautahat. Operating from Laukaha Bazaar, we bring you genuine brand items, honest retail pricing, and expert guidance for all your house building and bathroom renovation needs.</p>
+            <div class="stats-row">
+                <div class="stat-box">
+                    <h3>100%</h3>
+                    <p>Genuine Quality</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Best</h3>
+                    <p>Market Rates</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Trusted</h3>
+                    <p>Local Service</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Contact & Location Section -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2>Visit Our Retail Shop</h2>
-            <p class="section-sub">Drop by or give us a call for inquiries and best quotations.</p>
+            <div class="section-title">
+                <h2>Visit Our Shop</h2>
+                <p>Drop by for live catalog viewing and best price quotations.</p>
+            </div>
             
             <div class="contact-box">
                 <div class="contact-info">
-                    <p><i class="fas fa-store"></i> <strong>Shop Name:</strong> Jaiswal Tiles and Hardware</p>
-                    <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> Laukaha Bazaar, Rautahat, Nepal</p>
-                    <p><i class="fas fa-phone-alt"></i> <strong>Mobile No:</strong> <a href="tel:9814278883">9814278883</a></p>
-                    <p><i class="fas fa-clock"></i> <strong>Hours:</strong> Sunday - Friday: 8:00 AM - 7:00 PM</p>
+                    <div class="info-item">
+                        <i class="fas fa-store"></i>
+                        <div>
+                            <h4>Shop Name</h4>
+                            <p>Jaiswal Tiles and Hardware</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Laukaha Bazaar, Rautahat, Nepal</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Mobile Number</h4>
+                            <p><a href="tel:9814278883">9814278883</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>Sunday – Friday: 8:00 AM – 7:00 PM</p>
+                        </div>
+                    </div>
                     
                     <div class="action-buttons">
                         <a href="tel:9814278883" class="btn call-action"><i class="fas fa-phone"></i> Call Now</a>
-                        <a href="https://wa.me/9779814278883" target="_blank" class="btn whatsapp-action"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+                        <a href="https://wa.me/9779814278883" target="_blank" class="btn whatsapp-action"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                     </div>
                 </div>
 
-                <!-- Google Maps Embed for Jaiswal Tiles and Hardware -->
+                <!-- Google Maps Embed -->
                 <div class="map-container">
                     <iframe 
                         src="https://maps.google.com/maps?q=Jaiswal%20Tiles%20and%20Hardware,%20Laukaha%20Bazaar,%20Rautahat,%20Nepal&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                         width="100%" 
-                        height="300" 
+                        height="320" 
                         style="border:0;" 
                         allowfullscreen="" 
                         loading="lazy">
@@ -115,8 +201,17 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Jaiswal Tiles and Hardware. All Rights Reserved. | Laukaha Bazaar, Rautahat</p>
+        <p>&copy; 2026 Jaiswal Tiles and Hardware. All Rights Reserved. | Laukaha Bazaar, Rautahat, Nepal</p>
     </footer>
 
+    <!-- Simple Script for Mobile Menu Toggle -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
