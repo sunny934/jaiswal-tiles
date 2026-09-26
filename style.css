@@ -65,7 +65,7 @@ header {
     background: rgba(11, 15, 25, 0.96);
     backdrop-filter: blur(12px);
     color: #fff;
-    padding: 1.1rem 0;
+    padding: 0.8rem 0;
     position: sticky;
     top: 0;
     z-index: 999;
@@ -78,22 +78,18 @@ header {
     align-items: center;
 }
 
-.logo h2 {
-    font-size: 1.35rem;
-    font-weight: 800;
-    color: #fff;
-    letter-spacing: -0.5px;
+/* Logo Styling */
+.logo-container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
-.logo h2 span {
-    color: #f59e0b;
-}
-
-.logo p {
-    font-size: 0.7rem;
-    color: #94a3b8;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+.brand-logo {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 6px;
 }
 
 nav {
@@ -135,7 +131,7 @@ nav a:hover {
     color: #fff;
 }
 
-/* Hero Section - Desktop Balanced */
+/* Hero Section */
 .hero {
     position: relative;
     background: url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
@@ -261,7 +257,7 @@ nav a:hover {
     font-size: 1.05rem;
 }
 
-/* Products Section - Perfect 4-Column Desktop Grid */
+/* Products Section */
 .products-section {
     padding: 6.5rem 0;
     background: #f8fafc;
@@ -359,7 +355,7 @@ nav a:hover {
     color: #cbd5e1;
 }
 
-/* Contact Section - Clean Desktop Split */
+/* Contact Section */
 .contact-section {
     padding: 6.5rem 0;
     background: white;
