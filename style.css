@@ -78,7 +78,7 @@ header {
     align-items: center;
 }
 
-/* Logo Styling - Made Larger */
+/* Logo Styling */
 .logo-container a {
     display: flex;
     align-items: center;
@@ -462,20 +462,86 @@ nav a:hover {
     border-radius: 12px;
 }
 
+/* Policies Section Styling */
+.policies-section {
+    padding: 5rem 0;
+    background: #f1f5f9;
+    border-top: 1px solid #e2e8f0;
+}
+
+.policies-section h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #0b0f19;
+    margin-bottom: 2.5rem;
+}
+
+.policy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.policy-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.policy-card h4 {
+    font-size: 1.1rem;
+    color: #0b0f19;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.policy-card p {
+    font-size: 0.88rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
 /* Footer */
 footer {
     background: #070a12;
     color: #64748b;
-    text-align: center;
     padding: 2.5rem 0;
-    font-size: 0.88rem;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 0.88rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #f59e0b;
 }
 
 /* Responsive Media Queries */
 @media(max-width: 1024px) {
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .policy-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -486,6 +552,10 @@ footer {
     }
     .hero h1 {
         font-size: 2.4rem;
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
     }
 }
 
