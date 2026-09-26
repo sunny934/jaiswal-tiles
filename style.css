@@ -78,7 +78,7 @@ header {
     align-items: center;
 }
 
-/* Logo Styling - Larger and Clean without extra text */
+/* Logo Styling - Made Larger */
 .logo-container a {
     display: flex;
     align-items: center;
@@ -86,8 +86,8 @@ header {
 }
 
 .brand-logo {
-    height: 65px !important;
-    max-height: 65px !important;
+    height: 85px !important;
+    max-height: 85px !important;
     width: auto !important;
     object-fit: contain;
     border-radius: 8px;
