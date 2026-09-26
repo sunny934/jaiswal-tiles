@@ -78,7 +78,7 @@ header {
     align-items: center;
 }
 
-/* Logo Styling */
+/* Logo Styling - Fixed for Web and Mobile */
 .logo-container a {
     display: flex;
     align-items: center;
@@ -86,8 +86,9 @@ header {
 }
 
 .brand-logo {
-    height: 48px;
-    width: auto;
+    height: 45px !important;
+    max-height: 45px !important;
+    width: auto !important;
     object-fit: contain;
     border-radius: 6px;
 }
