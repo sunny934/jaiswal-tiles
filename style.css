@@ -304,6 +304,48 @@ nav a:hover {
     line-height: 1.5;
 }
 
+/* Brands Section Style */
+.brands-section {
+    padding: 5rem 0;
+    background: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.brands-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.brand-badge {
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    padding: 15px 30px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0b0f19;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    transition: all 0.3s ease;
+}
+
+.brand-badge i {
+    color: #f59e0b;
+    font-size: 1.2rem;
+}
+
+.brand-badge:hover {
+    border-color: #f59e0b;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.15);
+}
+
 /* About Section */
 .about-section {
     background: #0b0f19;
@@ -359,14 +401,14 @@ nav a:hover {
 /* Contact Section */
 .contact-section {
     padding: 6.5rem 0;
-    background: white;
+    background: #f8fafc;
 }
 
 .contact-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    background: #f8fafc;
+    background: white;
     padding: 3.5rem;
     border-radius: 20px;
     border: 1px solid #e2e8f0;
@@ -465,7 +507,7 @@ nav a:hover {
 /* Policies Section Styling */
 .policies-section {
     padding: 5rem 0;
-    background: #f1f5f9;
+    background: #ffffff;
     border-top: 1px solid #e2e8f0;
 }
 
@@ -483,7 +525,7 @@ nav a:hover {
 }
 
 .policy-card {
-    background: white;
+    background: #f8fafc;
     padding: 2rem;
     border-radius: 12px;
     border: 1px solid #e2e8f0;
