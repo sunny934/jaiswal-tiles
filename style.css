@@ -367,7 +367,7 @@ nav a:hover {
     border-radius: 8px;
     border: 1px solid #cbd5e1;
     background: white;
-    color: #0b0f19; /* Agar yahan white ho toh ise black kar do */
+    color: #000000; /* Agar yahan white ho toh ise black kar do */
     font-size: 1rem;
 }
 
