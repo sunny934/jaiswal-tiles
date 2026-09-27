@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <!-- Feature 3: Special Festival Offer Top Banner -->
+    <!-- Special Festival Offer Top Banner -->
     <div class="top-offer-banner">
         <div class="container">
             <p><i class="fas fa-bullhorn"></i> <strong>Special Wedding & Home Renovation Season Offer:</strong> Get special wholesale discounts on bulk Tiles & Sanitary orders! <a href="#quotation">Enquire Now</a></p>
@@ -24,11 +24,15 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Top Info Bar -->
+    <!-- Top Info Bar with Real Google Translate Widget -->
     <div class="top-bar">
         <div class="container top-bar-flex">
-            <span><i class="fas fa-map-marker-alt"></i> Laukaha Bazaar, Rautahat, Nepal (Nepali / हिंदी Friendly)</span>
-            <span><i class="fas fa-phone-alt"></i> <a href="tel:9814278883">9814278883</a></span>
+            <span><i class="fas fa-map-marker-alt"></i> Laukaha Bazaar, Rautahat, Nepal</span>
+            <div class="top-bar-right">
+                <span><i class="fas fa-phone-alt"></i> <a href="tel:9814278883">9814278883</a></span>
+                <!-- Google Translate Element -->
+                <div id="google_translate_element"></div>
+            </div>
         </div>
     </div>
 
@@ -101,7 +105,7 @@
         </div>
     </section>
 
-    <!-- Feature 4: Real Shop & Product Gallery Section -->
+    <!-- Real Shop & Product Gallery Section -->
     <section id="gallery" class="gallery-section">
         <div class="container">
             <div class="section-title">
@@ -146,16 +150,13 @@
                     <img src="laminar.png" alt="Laminar">
                 </div>
                 <div class="brand-card">
-                    <img src="rextron.jpg" alt="Rextron">
-                </div>
-                <div class="brand-card">
-                    <img src="hindwaree.jpg" alt="Hindware">
+                    <img src="rextron.png" alt="Rextron">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Feature 1: Quick WhatsApp Quotation Form -->
+    <!-- Quick WhatsApp Quotation Form -->
     <section id="quotation" class="quotation-section">
         <div class="container">
             <div class="quotation-box">
@@ -192,7 +193,7 @@
         </div>
     </section>
 
-    <!-- Feature 2: Google Review Style Testimonials Section -->
+    <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials-section">
         <div class="container">
             <div class="section-title">
@@ -339,6 +340,14 @@
         </div>
     </footer>
 
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,hi,ne', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
     <!-- Interactive Script & WhatsApp Form Handler -->
     <script>
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -354,7 +363,6 @@
             });
         });
 
-        // WhatsApp Quotation Form Function
         function sendToWhatsApp(e) {
             e.preventDefault();
             const name = document.getElementById('qName').value;
