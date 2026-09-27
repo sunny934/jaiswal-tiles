@@ -47,9 +47,10 @@
             <nav id="navMenu">
                 <a href="#home">Home</a>
                 <a href="#products">Products</a>
+                <a href="#calculator">Calculator</a>
                 <a href="#gallery">Gallery</a>
                 <a href="#brands">Brands</a>
-                <a href="#testimonials">Reviews</a>
+                <a href="#faq">FAQ</a>
                 <a href="#quotation" class="nav-btn">Get Quote</a>
             </nav>
             <div class="menu-toggle" id="mobileMenuBtn">
@@ -67,7 +68,7 @@
             <p>Your ultimate retail destination for stylish floor & wall tiles, elegant wash basins, commodes, heavy-duty bathroom fittings, and reliable hardware items.</p>
             <div class="hero-btns">
                 <a href="tel:9814278883" class="btn primary-btn"><i class="fas fa-phone"></i> Call: 9814278883</a>
-                <a href="#quotation" class="btn secondary-btn">Get Free Quotation</a>
+                <a href="#calculator" class="btn secondary-btn">Tile Calculator</a>
             </div>
         </div>
     </section>
@@ -100,6 +101,35 @@
                     <div class="card-icon"><i class="fas fa-tools"></i></div>
                     <h3>Hardware Essentials</h3>
                     <p>Reliable building materials, construction support equipment, PVC pipes, valves, and daily hardware utilities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW HEAVY FEATURE 1: Tile Area Calculator Section -->
+    <section id="calculator" class="calc-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Interactive Tile Area Calculator</h2>
+                <p>Estimate the approximate square footage needed for your room before visiting our store.</p>
+            </div>
+            <div class="calc-box">
+                <div class="calc-form-wrap">
+                    <div class="form-group">
+                        <label>Room Length (in Feet)</label>
+                        <input type="number" id="roomLength" placeholder="e.g. 15" min="1">
+                    </div>
+                    <div class="form-group">
+                        <label>Room Width (in Feet)</label>
+                        <input type="number" id="roomWidth" placeholder="e.g. 12" min="1">
+                    </div>
+                    <button type="button" class="btn primary-btn calc-btn" onclick="calculateArea()">Calculate Area</button>
+                </div>
+                <div class="calc-result-wrap" id="calcResultBox" style="display: none;">
+                    <h3>Estimated Requirement</h3>
+                    <p id="resultText">0 Sq. Ft.</p>
+                    <small>+ 5% extra recommended for wastage/cutting adjustments.</small>
+                    <a href="#" id="whatsappCalcBtn" target="_blank" class="btn whatsapp-action"><i class="fab fa-whatsapp"></i> Send Requirement to WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -150,10 +180,7 @@
                     <img src="laminar.png" alt="Laminar">
                 </div>
                 <div class="brand-card">
-                    <img src="rextron.jpg" alt="Rextron">
-                </div>
-                <div class="brand-card">
-                    <img src="hindwaree.jpg" alt="Hindware">
+                    <img src="rextron.png" alt="Rextron">
                 </div>
             </div>
         </div>
@@ -224,6 +251,45 @@
                     </div>
                     <p>"Genuine quality hardware and prompt home delivery coordination. Very polite owner and staff."</p>
                     <h4>- Manoj Jaiswal</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW HEAVY FEATURE 2: FAQ Accordion Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Got questions? Find quick answers about our products, delivery, and services.</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>What are your shop opening hours?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our retail store at Laukaha Bazaar, Rautahat is open from Sunday to Friday, 8:00 AM to 7:00 PM. We remain closed on Saturdays.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Do you offer delivery services for bulk orders?</h3>
+                        <p>Yes, we coordinate safe home delivery services for bulk tile and hardware purchases across nearby locations in Rautahat.</p>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we coordinate safe home delivery services for bulk tile and hardware purchases across nearby locations in Rautahat.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Are all branded items genuine?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>100%! We deal directly with authorized distributors of top brands like Kajaria, Somany, Prime Tiles, Laminar, and Rextron to guarantee authentic quality.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -351,7 +417,7 @@
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-    <!-- Interactive Script & WhatsApp Form Handler -->
+    <!-- Interactive Script, Calculator & FAQ Handlers -->
     <script>
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const navMenu = document.getElementById('navMenu');
@@ -366,6 +432,7 @@
             });
         });
 
+        // WhatsApp Quotation Form Function
         function sendToWhatsApp(e) {
             e.preventDefault();
             const name = document.getElementById('qName').value;
@@ -374,6 +441,35 @@
 
             const whatsappUrl = `https://wa.me/9779814278883?text=Hello%20Jaiswal%20Tiles,%20My%20name%20is%20${encodeURIComponent(name)}.%20Phone:%20${encodeURIComponent(phone)}.%20I%20am%20interested%20in%20getting%20a%20quotation%20for:%20${encodeURIComponent(item)}`;
             window.open(whatsappUrl, '_blank');
+        }
+
+        // Tile Area Calculator Function
+        function calculateArea() {
+            const length = parseFloat(document.getElementById('roomLength').value);
+            const width = parseFloat(document.getElementById('roomWidth').value);
+            const resultBox = document.getElementById('calcResultBox');
+            const resultText = document.getElementById('resultText');
+            const whatsappBtn = document.getElementById('whatsappCalcBtn');
+
+            if (!length || !width || length <= 0 || width <= 0) {
+                alert('Please enter valid positive numbers for length and width.');
+                return;
+            }
+
+            const baseArea = length * width;
+            const totalWithWastage = Math.ceil(baseArea * 1.05);
+
+            resultText.innerText = `${totalWithWastage} Sq. Ft. (Base: ${baseArea} + 5% wastage)`;
+            resultBox.style.display = 'block';
+
+            const waText = `Hello Jaiswal Tiles, I calculated my room requirement: Length ${length}ft x Width ${width}ft = Total approx ${totalWithWastage} Sq. Ft. Please suggest best tiles for this.`;
+            whatsappBtn.href = `https://wa.me/9779814278883?text=${encodeURIComponent(waText)}`;
+        }
+
+        // FAQ Toggle Function
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            item.classList.toggle('active');
         }
     </script>
 </body>
