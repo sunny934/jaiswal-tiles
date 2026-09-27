@@ -304,7 +304,7 @@ nav a:hover {
     line-height: 1.5;
 }
 
-/* Brands Section Style */
+/* Official Brand Logos Section Styling */
 .brands-section {
     padding: 5rem 0;
     background: #ffffff;
@@ -312,38 +312,44 @@ nav a:hover {
     border-bottom: 1px solid #e2e8f0;
 }
 
-.brands-grid {
-    display: flex;
+.brand-logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
 }
 
-.brand-badge {
+.brand-card {
     background: #f8fafc;
-    border: 2px solid #e2e8f0;
-    padding: 15px 30px;
-    border-radius: 50px;
+    border: 1px solid #e2e8f0;
+    padding: 20px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #0b0f19;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    justify-content: center;
+    height: 110px;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
 }
 
-.brand-badge i {
-    color: #f59e0b;
-    font-size: 1.2rem;
+.brand-card img {
+    max-width: 100%;
+    max-height: 65px;
+    object-fit: contain;
+    filter: grayscale(20%);
+    transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-.brand-badge:hover {
+.brand-card:hover {
     border-color: #f59e0b;
     transform: translateY(-4px);
     box-shadow: 0 8px 20px rgba(245, 158, 11, 0.15);
+}
+
+.brand-card:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
 }
 
 /* About Section */
